@@ -5,6 +5,7 @@ const morgan = require('morgan')
 const { engine } = require ('express-handlebars');
 const port = 3000
 
+const route = require('./routes/index');
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
 // })
@@ -20,10 +21,9 @@ app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 //console.log(__dirname);
 
-app.get('/', (req, res) => {
-  res.render('home')
-})
+//Route init
+route(app); 
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+    console.log(`Example app listening on port ${port}`)
+  })
