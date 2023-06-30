@@ -23,9 +23,15 @@
   },
   "homepage": "https://github.com/nphoa0709/nodejs_blog#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",
-    "node-sass": "^9.0.0"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "mongoose": "^6.10.0",
+    "mongoose-slug-generator": "^1.0.4",
+    "node-sass": "^9.0.0",
+    "prettier": "^2.8.8"
   },
   "devDependencies": {
     "morgan": "^1.10.0",

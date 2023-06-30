@@ -3,9 +3,17 @@ const app = express()
 const path = require('path');
 const morgan = require('morgan')
 const { engine } = require ('express-handlebars');
+var bodyParser = require('body-parser');
 const port = 3000
 
 const route = require('./routes/index');
+const db = require('./app/config/db/index');
+
+//connect db
+db.connect();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
 // })
